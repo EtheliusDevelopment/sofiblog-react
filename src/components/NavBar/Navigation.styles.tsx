@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+
+    width: 90%;
+
   .MuiBottomNavigation-root {
     background-color: #3f51b57d;
     border-radius: 25px;
-    width: 95%;
+    width: 100%;
     height: 100%;
     padding: 0 1%;
     flex-wrap: wrap;
@@ -19,7 +22,8 @@ export const Wrapper = styled.div`
 
   .MuiBottomNavigationAction-root {
     max-width: unset;
-    min-width: 11vw;
+    min-width: unset;
+    margin-right: 2%;
   }
 
   .MuiBottomNavigationAction-label {
