@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import ShareIcon from '@material-ui/icons/Share';
 
 const NavBar = () => {
   return (
@@ -17,6 +18,8 @@ const NavBar = () => {
         <div className="social-box">
           <YouTubeIcon onClick={() => window.open("https://youtube.com", "_blank")} />
           <InstagramIcon onClick={() => window.open("https://instagram.com", "_blank")}/>
+          <ShareIcon onClick={() => window.open("https://instagram.com", "_blank")}/>
+          
         </div>
       </div>
       <Navigation />

@@ -30,7 +30,7 @@ function App() {
         <Route path="/sofia-and-the-city" exact component={TheCity} />
         <Route path="/sofia-and-the-sea" exact component={TheSea} />
         <Route path="/sofia-and-the-mountain" exact component={TheMountain} />
-        <Route path="/video" exact component={Video} />
+        <Route path="/videos" exact component={Video} />
         <Route path="/moments" exact component={Moments} />
         <Route path="/contacts" exact component={Contacts} />
       </Switch>
