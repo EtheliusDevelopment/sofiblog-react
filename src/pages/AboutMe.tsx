@@ -1,10 +1,9 @@
-
 const AboutMe = () => {
-    return (
-        <>
-           <div className="first-block div-block">
+  return (
+    <>
+      <div className="first-block div-block">
         <h1 className="h1-title-block">
-          Lorem ipsum dolor sit amet consectetur.
+          Roadmap 
         </h1>
         <p className="p-par-block">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
@@ -16,7 +15,7 @@ const AboutMe = () => {
 
       <div className="second-block div-block">
         <h1 className="h1-title-block">
-          Lorem ipsum dolor sit amet consectetur.
+          Mummy and Daddy 
         </h1>
         <p className="p-par-block">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
@@ -28,7 +27,7 @@ const AboutMe = () => {
 
       <div className="third-block div-block">
         <h1 className="h1-title-block">
-          Lorem ipsum dolor sit amet consectetur.
+          School 
         </h1>
         <p className="p-par-block">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
@@ -40,7 +39,7 @@ const AboutMe = () => {
 
       <div className="fourth-block div-block">
         <h1 className="h1-title-block">
-          Lorem ipsum dolor sit amet consectetur.
+          FreeTime 
         </h1>
         <p className="p-par-block">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
@@ -49,8 +48,8 @@ const AboutMe = () => {
           doloremque cupiditate quidem?
         </p>
       </div>
-      </>
-    )
-}
+    </>
+  );
+};
 
-export default AboutMe
+export default AboutMe;

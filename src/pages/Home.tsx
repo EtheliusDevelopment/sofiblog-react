@@ -5,9 +5,7 @@ const Home = () => {
   return (
     <Wrapper>
       <div className="first-block div-block">
-        <h1 className="h1-title-block">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
+        <h1 className="h1-title-block">Welcome. Thanks to visit my Diary.</h1>
         <p className="p-par-block">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
           harum, expedita magnam amet reprehenderit cum id modi sunt tempore
@@ -17,9 +15,7 @@ const Home = () => {
       </div>
 
       <div className="second-block div-block">
-        <h1 className="h1-title-block">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
+        <h1 className="h1-title-block">Why this?</h1>
         <p className="p-par-block">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
           harum, expedita magnam amet reprehenderit cum id modi sunt tempore
@@ -29,9 +25,7 @@ const Home = () => {
       </div>
 
       <div className="third-block div-block">
-        <h1 className="h1-title-block">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
+        <h1 className="h1-title-block">Grow Up with Sofia.</h1>
         <p className="p-par-block">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
           harum, expedita magnam amet reprehenderit cum id modi sunt tempore
@@ -42,7 +36,7 @@ const Home = () => {
 
       <div className="fourth-block div-block">
         <h1 className="h1-title-block">
-          Lorem ipsum dolor sit amet consectetur.
+          Connect.
         </h1>
         <p className="p-par-block">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
