@@ -4,8 +4,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
+/* TYPO */
 
+.h1-title-block {
+  color: #ff149399;
+  text-align: center;
+  font-family: "Cabin Sketch";
+  font-size: 40px;
+  letter-spacing: 2px;
+}
 
+.p-par-block {
+  text-align: center;
+  font-family: "Sen";
+  font-size: 25px;
+  color: darkorchid;
+  letter-spacing: 1px;
+}
+
+/* LAYOUTING */
+
+.div-block {
+  margin: 3% 0;
+  padding: 0 5%;
+}
 
 body {
   margin: 0;
