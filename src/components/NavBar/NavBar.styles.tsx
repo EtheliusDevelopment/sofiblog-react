@@ -47,4 +47,15 @@ export const Wrapper = styled.div`
     letter-spacing: 1px;
     text-align: center;
   }
+
+  .social-box {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .social-box .MuiSvgIcon-root {
+    cursor: pointer;
+    color: white;
+  }
 `;
