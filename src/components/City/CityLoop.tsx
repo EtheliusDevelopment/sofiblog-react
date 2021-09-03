@@ -1,8 +1,20 @@
 import { Wrapper } from "./CityLoop.styles";
 import React from "react";
-import { Chip, Grid } from "@material-ui/core";
+import { Chip, Grid, Box, Typography } from "@material-ui/core";
 import sofia_test from "../../sofia_test.jpg";
-import { NatureOutlined, NaturePeople } from "@material-ui/icons";
+import { NatureOutlined } from "@material-ui/icons";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import Rating from "@material-ui/lab/Rating";
+import { withStyles } from "@material-ui/core/styles";
+
+const StyledRating = withStyles({
+  iconFilled: {
+    color: "#ff6d75",
+  },
+  iconHover: {
+    color: "#ff3d47",
+  },
+})(Rating);
 
 const CityLoop = () => {
   return (
@@ -17,14 +29,26 @@ const CityLoop = () => {
                 Some Paragraph{" "}
               </p>
               <div className="chip-box">
-              <Chip variant="outlined" size="small" label="Rome"/>
-              <Chip variant="outlined" size="small" label="WowCities"/>
-              <Chip variant="outlined" size="small" label="Art"/>
+                <Chip variant="outlined" size="small" label="Rome" />
+                <Chip variant="outlined" size="small" label="WowCities" />
+                <Chip variant="outlined" size="small" label="Art" />
               </div>
               <div className="kids-advisor">
-                  <h3>Kid's Advisor</h3>
-                  <NatureOutlined />
-                  <NaturePeople />
+                <h3 className="h3-kids-advisor">Kid's Advisor</h3>
+                <div className="rating-box">
+                  <NatureOutlined className="icon-rating-box" />
+                  <Box component="fieldset" mb={3} borderColor="transparent">
+                    <StyledRating
+                      name="customized-color"
+                      defaultValue={2}
+                      getLabelText={(value: number) =>
+                        `${value} Heart${value !== 1 ? "s" : ""}`
+                      }
+                      precision={0.5}
+                      icon={<FavoriteIcon fontSize="inherit" />}
+                    />
+                  </Box>
+                </div>
               </div>
             </div>
             <img className="img-box" src={sofia_test} alt="" />
@@ -39,6 +63,28 @@ const CityLoop = () => {
                 sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
                 Some Paragraph{" "}
               </p>
+              <div className="chip-box">
+                <Chip variant="outlined" size="small" label="Rome" />
+                <Chip variant="outlined" size="small" label="WowCities" />
+                <Chip variant="outlined" size="small" label="Art" />
+              </div>
+              <div className="kids-advisor">
+                <h3 className="h3-kids-advisor">Kid's Advisor</h3>
+                <div className="rating-box">
+                  <NatureOutlined className="icon-rating-box" />
+                  <Box component="fieldset" mb={3} borderColor="transparent">
+                    <StyledRating
+                      name="customized-color"
+                      defaultValue={2}
+                      getLabelText={(value: number) =>
+                        `${value} Heart${value !== 1 ? "s" : ""}`
+                      }
+                      precision={0.5}
+                      icon={<FavoriteIcon fontSize="inherit" />}
+                    />
+                  </Box>
+                </div>
+              </div>
             </div>
             <img className="img-box" src={sofia_test} alt="" />
           </div>
@@ -52,6 +98,28 @@ const CityLoop = () => {
                 sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
                 Some Paragraph{" "}
               </p>
+              <div className="chip-box">
+                <Chip variant="outlined" size="small" label="Rome" />
+                <Chip variant="outlined" size="small" label="WowCities" />
+                <Chip variant="outlined" size="small" label="Art" />
+              </div>
+              <div className="kids-advisor">
+                <h3 className="h3-kids-advisor">Kid's Advisor</h3>
+                <div className="rating-box">
+                  <NatureOutlined className="icon-rating-box" />
+                  <Box component="fieldset" mb={3} borderColor="transparent">
+                    <StyledRating
+                      name="customized-color"
+                      defaultValue={2}
+                      getLabelText={(value: number) =>
+                        `${value} Heart${value !== 1 ? "s" : ""}`
+                      }
+                      precision={0.5}
+                      icon={<FavoriteIcon fontSize="inherit" />}
+                    />
+                  </Box>
+                </div>
+              </div>
             </div>
             <img className="img-box" src={sofia_test} alt="" />
           </div>
@@ -65,6 +133,28 @@ const CityLoop = () => {
                 sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
                 Some Paragraph{" "}
               </p>
+              <div className="chip-box">
+                <Chip variant="outlined" size="small" label="Rome" />
+                <Chip variant="outlined" size="small" label="WowCities" />
+                <Chip variant="outlined" size="small" label="Art" />
+              </div>
+              <div className="kids-advisor">
+                <h3 className="h3-kids-advisor">Kid's Advisor</h3>
+                <div className="rating-box">
+                  <NatureOutlined className="icon-rating-box" />
+                  <Box component="fieldset" mb={3} borderColor="transparent">
+                    <StyledRating
+                      name="customized-color"
+                      defaultValue={2}
+                      getLabelText={(value: number) =>
+                        `${value} Heart${value !== 1 ? "s" : ""}`
+                      }
+                      precision={0.5}
+                      icon={<FavoriteIcon fontSize="inherit" />}
+                    />
+                  </Box>
+                </div>
+              </div>
             </div>
             <img className="img-box" src={sofia_test} alt="" />
           </div>
