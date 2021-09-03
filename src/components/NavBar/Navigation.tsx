@@ -40,7 +40,7 @@ export default function SimpleBottomNavigation() {
         />
 
         <BottomNavigationAction
-          label="@AboutMe"
+          label="@About Me"
           icon={<FavoriteIcon />}
           component={Link}
           to="/about-me"
