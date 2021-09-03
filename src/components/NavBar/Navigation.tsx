@@ -47,21 +47,21 @@ export default function SimpleBottomNavigation() {
         />
 
         <BottomNavigationAction
-          label="#CityLife"
+          label="#onCity"
           icon={<LocationCityIcon />}
           component={Link}
           to="/sofia-and-the-city"
         />
 
         <BottomNavigationAction
-          label="#SeaLife"
+          label="#onSea"
           icon={<BeachAccessIcon />}
           component={Link}
           to="/sofia-and-the-sea"
         />
 
         <BottomNavigationAction
-          label="#MountainLife"
+          label="#onMountain"
           icon={<FilterHdrIcon />}
           component={Link}
           to="/sofia-and-the-mountain"
