@@ -9,11 +9,8 @@ export const Wrapper = styled.div`
     border-radius: 25px;
     width: 100%;
     height: 100%;
-    padding: 0 1%;
     flex-wrap: wrap;
-    margin: auto;
     box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px rgb(0 0 0 / 14%), 0 1px 10px rgb(0 0 0 / 12%);
-
   }
 
   .MuiButtonBase-root {
