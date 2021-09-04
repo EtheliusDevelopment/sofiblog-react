@@ -19,16 +19,37 @@ const accessToken = ""; // This is where you would add your access token for a P
 const Client = Prismic.client(apiEndpoint, { accessToken });
 
 // TYPESCRIPT
+
 // TYPESCRIPT USESTATE
 export interface IPrismicRes {
-  
-    category: string;
-    post_title: [];
-    post_subtitle: [];
-    activities_rating: [];
-    body_post: [];
-  
+  category: string;
+  post_title: [];
+  post_subtitle: [];
+  activities_rating: [];
+  body_post: {
+    image_paragraph: {};
+    
+    title_paragraph: {
+      spans: [];
+      text: string;
+      type: string;
+    }[];
+
+    paragraph: {
+      spans: [];
+      text: string;
+      type: string;
+    }[];
+  }[];
 }
+
+export interface IBodyPar {
+  image_paragraph: {};
+  title_paragraph: [];
+  paragraph: [];
+}
+
+// ********
 
 const SingleRendering = () => {
   const [doc, setDocData] = useState<IPrismicRes>();
@@ -40,10 +61,10 @@ const SingleRendering = () => {
       );
       if (response) {
         setDocData(response.results[0].data);
+        console.log(response.results[0].data.body_post[0]);
       }
     };
     fetchData();
-    
   }, []);
 
   return (
@@ -63,7 +84,9 @@ const SingleRendering = () => {
       </div>
 
       <h3 style={{ textAlign: "center", color: "green" }}>
-        {doc?.category}
+        {doc?.body_post.map((item, index) => (
+          <h3>{item.title_paragraph[0].text}</h3>
+        ))}
       </h3>
 
       <div className="looped-block div-block">
