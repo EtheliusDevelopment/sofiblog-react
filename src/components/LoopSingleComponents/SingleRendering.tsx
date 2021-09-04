@@ -27,8 +27,16 @@ export interface IPrismicRes {
   post_subtitle: [];
   activities_rating: [];
   body_post: {
-    image_paragraph: {};
-    
+    image_paragraph: {
+      alt: string;
+      copyright: string;
+      dimensions: {
+        width: number;
+        height: number;
+      };
+      url: string;
+    };
+
     title_paragraph: {
       spans: [];
       text: string;
@@ -83,11 +91,26 @@ const SingleRendering = () => {
         <ShowCarousel />
       </div>
 
-      <h3 style={{ textAlign: "center", color: "green" }}>
+      
         {doc?.body_post.map((item, index) => (
-          <h3>{item.title_paragraph[0].text}</h3>
+          <div className="looped-block div-block">
+            <h1 className="h1-title-block">{item.title_paragraph[0].text}</h1>
+            <div className="img-looped-box">
+              <img
+                className="img-looped-block"
+                src={item.image_paragraph.url}
+                alt=""
+              />
+            </div>
+            {
+              item.paragraph.map((itemPar, index) => (
+                <p className="p-par-block">{itemPar.text}</p>
+              ))
+            }
+            
+          </div>
         ))}
-      </h3>
+      
 
       <div className="looped-block div-block">
         <h1 className="h1-title-block">Paragraph</h1>
