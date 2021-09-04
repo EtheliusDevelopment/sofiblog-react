@@ -17,25 +17,27 @@ export const Wrapper = styled.div`
   .img-carousel {
     width: 100%;
     object-fit: cover;
-    height: 20vh;
   }
 
   .box-carousel {
-    height: 50vh;
+    height: 10vh;
     width: 100%;
     background: white;
     margin: auto;
   }
 
   .badge-box {
-    width: 100;
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: white;
+    padding: 0 0 2% 0;
+    flex-wrap: wrap;
   }
 
   .MuiBadge-root {
     margin-right: 2%;
+    color: chartreuse;
   }
 
   .badge-item {

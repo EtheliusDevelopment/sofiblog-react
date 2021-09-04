@@ -5,7 +5,7 @@ import right_arrow from "../../right_arrow.svg";
 import left_arrow from "../../left_arrow.svg";
 import { Wrapper } from "./Carousel.styles";
 import sofia_test from "../../sofia_test.jpg";
-import ShutterSpeedIcon from '@material-ui/icons/ShutterSpeed';
+import ShutterSpeedIcon from "@material-ui/icons/ShutterSpeed";
 
 function ShowCarousel() {
   var items = [
@@ -17,15 +17,29 @@ function ShowCarousel() {
       name: "Random Name #2",
       description: "Hello World!",
     },
+    {
+      name: "Random Name #2",
+      description: "Hello World!",
+    },
+    {
+      name: "Random Name #2",
+      description: "Hello World!",
+    },
+    {
+      name: "Random Name #2",
+      description: "Hello World!",
+    },
   ];
 
   return (
     <Wrapper>
       <Carousel
         className="box-carousel"
-        autoPlay={false}
+        autoPlay
+        interval={8000}
         fullHeightHover={false}
-        navButtonsAlwaysVisible
+        indicators={false}
+        navButtonsAlwaysInvisible
         navButtonsProps={{
           // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
           style: {
@@ -39,7 +53,7 @@ function ShowCarousel() {
           </>
         ))}
       </Carousel>
-        <Item />
+      <Item />
     </Wrapper>
   );
 }
@@ -61,7 +75,7 @@ function Item(props: any) {
 
         <div className="badge-item">
           <Badge badgeContent={4} color="primary">
-              <ShutterSpeedIcon />
+            <ShutterSpeedIcon />
           </Badge>
           <p className="p-badge">Public Parks</p>
         </div>
@@ -84,7 +98,6 @@ function Item(props: any) {
           </Badge>
           <p className="p-badge">English Speakers</p>
         </div>
-        
       </div>
     </>
   );
