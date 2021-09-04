@@ -3,7 +3,7 @@ const Video = () => {
     <>
       <div className="first-block div-block">
         <h1 className="h1-title-block">
-        Me and the camera ... almost friends!
+          Me and the camera ... almost friends!
         </h1>
         <p className="p-par-block">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
@@ -12,7 +12,6 @@ const Video = () => {
           doloremque cupiditate quidem?
         </p>
       </div>
-
     </>
   );
 };

@@ -4,15 +4,27 @@ export const Wrapper = styled.div`
   /* TYPO */
 
   .h4-text-box {
-    font-family: "Rampart One";
-    color: darkorange;
+    font-family: "Cherry Cream Soda";
+    color: deeppink;
     font-size: 30px;
     letter-spacing: 1px;
+    margin: unset;
   }
+
+  .p-box {
+    width: 90%;
+  }
+
   .p-text-box {
     font-family: "Cherry Cream Soda";
     letter-spacing: 0.5px;
     color: darkslategrey;
+
+    /* CLAMP */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   span.MuiChip-label {
@@ -21,7 +33,7 @@ export const Wrapper = styled.div`
     letter-spacing: 1px;
   }
 
-  .h3-kids-advisor{
+  .h3-kids-advisor {
     font-family: "Cherry Cream Soda";
     color: mediumvioletred;
     font-size: 14px;
@@ -39,18 +51,26 @@ export const Wrapper = styled.div`
   .text-box {
     width: 50%;
     padding: 2%;
+    box-sizing: border-box;
   }
-
-  .img-box {
+  .img-main-box {
     width: 50%;
+    position: relative;
+  }
+  .img-box {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+
     /* filter: drop-shadow(2px 4px 6px rgb(0 0 0 / 50%)); */
   }
 
   .MuiChip-root {
-    color: deeppink;
+    color: white;
     border: 1px solid deeppink;
+    background: deeppink;
     margin-right: 3%;
+    margin-top: 3%;
   }
 
   .rating-box {
@@ -63,12 +83,27 @@ export const Wrapper = styled.div`
     padding: unset;
   }
 
-  .icon-rating-box{
+  .icon-rating-box {
     color: mediumvioletred;
   }
+
+  .kids-advisor {
+    border-top: 2px solid #c715854f;
+    margin-top: 5%;
+  }
+
+  .chip-box {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding: 5% 3% 15% 3%;
+    width: 100%;
+    background: #ffffff59;
+  }
+
   @media screen and (max-width: 770px) {
-    
-    
     .card-box {
       flex-direction: column;
     }
@@ -85,9 +120,11 @@ export const Wrapper = styled.div`
     }
 
     .rating-box {
-    justify-content: center;
-  }
+      justify-content: center;
+    }
 
-
+    .kids-advisor {
+      margin-top: 3%;
+    }
   }
 `;

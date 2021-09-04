@@ -1,11 +1,14 @@
 import { Wrapper } from "./CityLoop.styles";
 import React from "react";
-import { Chip, Grid, Box, Typography } from "@material-ui/core";
+import { Chip, Grid, Box, Fab } from "@material-ui/core";
 import sofia_test from "../../sofia_test.jpg";
+import kids_advisor from "../../kids_advisor.svg";
 import { NatureOutlined } from "@material-ui/icons";
+import AddIcon from "@material-ui/icons/Add";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import Rating from "@material-ui/lab/Rating";
 import { withStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const StyledRating = withStyles({
   iconFilled: {
@@ -24,19 +27,23 @@ const CityLoop = () => {
           <div className="card-box">
             <div className="text-box">
               <h4 className="h4-text-box">SOME TITLE</h4>
-              <p className="p-text-box">
-                sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
-                Some Paragraph{" "}
-              </p>
-              <div className="chip-box">
-                <Chip variant="outlined" size="small" label="Rome" />
-                <Chip variant="outlined" size="small" label="WowCities" />
-                <Chip variant="outlined" size="small" label="Art" />
+              <div className="p-box">
+                <p className="p-text-box">
+                  sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
+                  Some Paragraph
+                </p>
               </div>
+              <Link to="/">
+                {" "}
+                <Fab size="small" color="secondary" aria-label="add">
+                  <AddIcon />
+                </Fab>
+              </Link>
+
               <div className="kids-advisor">
                 <h3 className="h3-kids-advisor">Kid's Advisor</h3>
                 <div className="rating-box">
-                  <NatureOutlined className="icon-rating-box" />
+                  <img src={kids_advisor} alt="" />
                   <Box component="fieldset" mb={3} borderColor="transparent">
                     <StyledRating
                       name="customized-color"
@@ -51,7 +58,14 @@ const CityLoop = () => {
                 </div>
               </div>
             </div>
-            <img className="img-box" src={sofia_test} alt="" />
+            <div className="img-main-box">
+              <img className="img-box" src={sofia_test} alt="" />
+              <div className="chip-box">
+                <Chip variant="outlined" size="small" label="Rome" />
+                <Chip variant="outlined" size="small" label="WowCities" />
+                <Chip variant="outlined" size="small" label="Art" />
+              </div>
+            </div>
           </div>
         </Grid>
 
@@ -59,19 +73,23 @@ const CityLoop = () => {
           <div className="card-box">
             <div className="text-box">
               <h4 className="h4-text-box">SOME TITLE</h4>
-              <p className="p-text-box">
-                sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
-                Some Paragraph{" "}
-              </p>
-              <div className="chip-box">
-                <Chip variant="outlined" size="small" label="Rome" />
-                <Chip variant="outlined" size="small" label="WowCities" />
-                <Chip variant="outlined" size="small" label="Art" />
+              <div className="p-box">
+                <p className="p-text-box">
+                  sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
+                  Some Paragraph
+                </p>
               </div>
+              <Link to="/">
+                {" "}
+                <Fab size="small" color="secondary" aria-label="add">
+                  <AddIcon />
+                </Fab>
+              </Link>
+
               <div className="kids-advisor">
                 <h3 className="h3-kids-advisor">Kid's Advisor</h3>
                 <div className="rating-box">
-                  <NatureOutlined className="icon-rating-box" />
+                  <img src={kids_advisor} alt="" />
                   <Box component="fieldset" mb={3} borderColor="transparent">
                     <StyledRating
                       name="customized-color"
@@ -86,7 +104,14 @@ const CityLoop = () => {
                 </div>
               </div>
             </div>
-            <img className="img-box" src={sofia_test} alt="" />
+            <div className="img-main-box">
+              <img className="img-box" src={sofia_test} alt="" />
+              <div className="chip-box">
+                <Chip variant="outlined" size="small" label="Rome" />
+                <Chip variant="outlined" size="small" label="WowCities" />
+                <Chip variant="outlined" size="small" label="Art" />
+              </div>
+            </div>
           </div>
         </Grid>
 
@@ -94,19 +119,23 @@ const CityLoop = () => {
           <div className="card-box">
             <div className="text-box">
               <h4 className="h4-text-box">SOME TITLE</h4>
-              <p className="p-text-box">
-                sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
-                Some Paragraph{" "}
-              </p>
-              <div className="chip-box">
-                <Chip variant="outlined" size="small" label="Rome" />
-                <Chip variant="outlined" size="small" label="WowCities" />
-                <Chip variant="outlined" size="small" label="Art" />
+              <div className="p-box">
+                <p className="p-text-box">
+                  sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
+                  Some Paragraph
+                </p>
               </div>
+              <Link to="/">
+                {" "}
+                <Fab size="small" color="secondary" aria-label="add">
+                  <AddIcon />
+                </Fab>
+              </Link>
+
               <div className="kids-advisor">
                 <h3 className="h3-kids-advisor">Kid's Advisor</h3>
                 <div className="rating-box">
-                  <NatureOutlined className="icon-rating-box" />
+                  <img src={kids_advisor} alt="" />
                   <Box component="fieldset" mb={3} borderColor="transparent">
                     <StyledRating
                       name="customized-color"
@@ -121,7 +150,14 @@ const CityLoop = () => {
                 </div>
               </div>
             </div>
-            <img className="img-box" src={sofia_test} alt="" />
+            <div className="img-main-box">
+              <img className="img-box" src={sofia_test} alt="" />
+              <div className="chip-box">
+                <Chip variant="outlined" size="small" label="Rome" />
+                <Chip variant="outlined" size="small" label="WowCities" />
+                <Chip variant="outlined" size="small" label="Art" />
+              </div>
+            </div>
           </div>
         </Grid>
 
@@ -129,19 +165,23 @@ const CityLoop = () => {
           <div className="card-box">
             <div className="text-box">
               <h4 className="h4-text-box">SOME TITLE</h4>
-              <p className="p-text-box">
-                sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
-                Some Paragraph{" "}
-              </p>
-              <div className="chip-box">
-                <Chip variant="outlined" size="small" label="Rome" />
-                <Chip variant="outlined" size="small" label="WowCities" />
-                <Chip variant="outlined" size="small" label="Art" />
+              <div className="p-box">
+                <p className="p-text-box">
+                  sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
+                  Some Paragraph
+                </p>
               </div>
+              <Link to="/">
+                {" "}
+                <Fab size="small" color="secondary" aria-label="add">
+                  <AddIcon />
+                </Fab>
+              </Link>
+
               <div className="kids-advisor">
                 <h3 className="h3-kids-advisor">Kid's Advisor</h3>
                 <div className="rating-box">
-                  <NatureOutlined className="icon-rating-box" />
+                  <img src={kids_advisor} alt="" />
                   <Box component="fieldset" mb={3} borderColor="transparent">
                     <StyledRating
                       name="customized-color"
@@ -156,7 +196,17 @@ const CityLoop = () => {
                 </div>
               </div>
             </div>
-            <img className="img-box" src={sofia_test} alt="" />
+            <div className="img-main-box">
+              <img className="img-box" src={sofia_test} alt="" />
+              <div className="chip-box">
+                <Chip variant="outlined" size="small" label="Rome" />
+                <Chip variant="outlined" size="small" label="WowCities" />
+                <Chip variant="outlined" size="small" label="Art" />
+                <Chip variant="outlined" size="small" label="Rome" />
+                <Chip variant="outlined" size="small" label="WowCities" />
+                <Chip variant="outlined" size="small" label="Art" />
+              </div>
+            </div>
           </div>
         </Grid>
       </Grid>
