@@ -11,6 +11,7 @@ import TheMountain from "./pages/TheMountain";
 import Moments from "./pages/Moments";
 import Contacts from "./pages/Contacts";
 import Video from "./pages/Video";
+import SingleRender from "./pages/SingleRender";
 
 // ASSETS and STYLES
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/videos" exact component={Video} />
         <Route path="/moments" exact component={Moments} />
         <Route path="/contacts" exact component={Contacts} />
+        <Route path="/article/:slug" exact component={SingleRender} />
       </Switch>
     </Router>
   );

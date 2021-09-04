@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   .h4-text-box {
     font-family: "Cherry Cream Soda";
     color: deeppink;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 1px;
     margin: unset;
   }
@@ -61,8 +61,7 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     object-fit: contain;
-
-    /* filter: drop-shadow(2px 4px 6px rgb(0 0 0 / 50%)); */
+    filter: drop-shadow(2px 4px 6px #00000061);
   }
 
   .MuiChip-root {
@@ -103,6 +102,16 @@ export const Wrapper = styled.div`
     background: #ffffff59;
   }
 
+  .btn-read-more {
+    display: flex;
+    text-decoration: none;
+  }
+
+  .p-read-more {
+    margin-left: 3%;
+    font-family: "Cabin Sketch";
+  }
+
   @media screen and (max-width: 770px) {
     .card-box {
       flex-direction: column;
@@ -111,6 +120,11 @@ export const Wrapper = styled.div`
     .text-box {
       width: 100%;
       order: 2;
+    }
+
+    .img-main-box {
+      width: 100%;
+      
     }
 
     .img-box {

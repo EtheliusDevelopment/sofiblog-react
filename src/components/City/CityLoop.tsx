@@ -26,18 +26,19 @@ const CityLoop = () => {
         <Grid item md={6}>
           <div className="card-box">
             <div className="text-box">
-              <h4 className="h4-text-box">SOME TITLE</h4>
+              <h4 className="h4-text-box">WONDERFUL ROME</h4>
               <div className="p-box">
                 <p className="p-text-box">
                   sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
                   Some Paragraph
                 </p>
               </div>
-              <Link to="/">
+              <Link to="/article/test" className="btn-read-more">
                 {" "}
                 <Fab size="small" color="secondary" aria-label="add">
                   <AddIcon />
                 </Fab>
+                <p className="p-read-more">Read More...</p>
               </Link>
 
               <div className="kids-advisor">
@@ -72,18 +73,19 @@ const CityLoop = () => {
         <Grid item md={6}>
           <div className="card-box">
             <div className="text-box">
-              <h4 className="h4-text-box">SOME TITLE</h4>
+              <h4 className="h4-text-box">WONDERFUL ROME</h4>
               <div className="p-box">
                 <p className="p-text-box">
                   sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
                   Some Paragraph
                 </p>
               </div>
-              <Link to="/">
+              <Link to="/article/test" className="btn-read-more">
                 {" "}
                 <Fab size="small" color="secondary" aria-label="add">
                   <AddIcon />
                 </Fab>
+                <p className="p-read-more">Read More...</p>
               </Link>
 
               <div className="kids-advisor">
@@ -118,18 +120,19 @@ const CityLoop = () => {
         <Grid item md={6}>
           <div className="card-box">
             <div className="text-box">
-              <h4 className="h4-text-box">SOME TITLE</h4>
+              <h4 className="h4-text-box">WONDERFUL ROME</h4>
               <div className="p-box">
                 <p className="p-text-box">
                   sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
                   Some Paragraph
                 </p>
               </div>
-              <Link to="/">
+              <Link to="/article/test" className="btn-read-more">
                 {" "}
                 <Fab size="small" color="secondary" aria-label="add">
                   <AddIcon />
                 </Fab>
+                <p className="p-read-more">Read More...</p>
               </Link>
 
               <div className="kids-advisor">
@@ -164,18 +167,19 @@ const CityLoop = () => {
         <Grid item md={6}>
           <div className="card-box">
             <div className="text-box">
-              <h4 className="h4-text-box">SOME TITLE</h4>
+              <h4 className="h4-text-box">WONDERFUL ROME</h4>
               <div className="p-box">
                 <p className="p-text-box">
                   sSome Paragraph Some Paragraph Some Paragraph Some Paragraph
                   Some Paragraph
                 </p>
               </div>
-              <Link to="/">
+              <Link to="/article/test" className="btn-read-more">
                 {" "}
                 <Fab size="small" color="secondary" aria-label="add">
                   <AddIcon />
                 </Fab>
+                <p className="p-read-more">Read More...</p>
               </Link>
 
               <div className="kids-advisor">
@@ -199,9 +203,6 @@ const CityLoop = () => {
             <div className="img-main-box">
               <img className="img-box" src={sofia_test} alt="" />
               <div className="chip-box">
-                <Chip variant="outlined" size="small" label="Rome" />
-                <Chip variant="outlined" size="small" label="WowCities" />
-                <Chip variant="outlined" size="small" label="Art" />
                 <Chip variant="outlined" size="small" label="Rome" />
                 <Chip variant="outlined" size="small" label="WowCities" />
                 <Chip variant="outlined" size="small" label="Art" />
