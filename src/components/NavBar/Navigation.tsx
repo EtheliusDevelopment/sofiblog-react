@@ -5,10 +5,10 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import RestoreIcon from "@material-ui/icons/Restore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-import LocationCityIcon from '@material-ui/icons/LocationCity';
-import BeachAccessIcon from '@material-ui/icons/BeachAccess';
-import FilterHdrIcon from '@material-ui/icons/FilterHdr';
-import HouseIcon from '@material-ui/icons/House';
+import LocationCityIcon from "@material-ui/icons/LocationCity";
+import BeachAccessIcon from "@material-ui/icons/BeachAccess";
+import FilterHdrIcon from "@material-ui/icons/FilterHdr";
+import HouseIcon from "@material-ui/icons/House";
 import { Wrapper } from "./Navigation.styles";
 import { Link } from "react-router-dom";
 
@@ -40,7 +40,7 @@ export default function SimpleBottomNavigation() {
         />
 
         <BottomNavigationAction
-          label="@About Me"
+          label="@AboutMe"
           icon={<FavoriteIcon />}
           component={Link}
           to="/about-me"
@@ -79,6 +79,13 @@ export default function SimpleBottomNavigation() {
           icon={<LocationOnIcon />}
           component={Link}
           to="/videos"
+        />
+
+        <BottomNavigationAction
+          label="@AuntRosy"
+          icon={<LocationOnIcon />}
+          component={Link}
+          to="/aunt_rosy"
         />
 
         <BottomNavigationAction

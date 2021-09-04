@@ -33,6 +33,8 @@ function App() {
         <Route path="/sofia-and-the-mountain" exact component={TheMountain} />
         <Route path="/videos" exact component={Video} />
         <Route path="/moments" exact component={Moments} />
+        <Route path="/aunt_rosy" exact component={Moments} />
+        
         <Route path="/contacts" exact component={Contacts} />
         <Route path="/article/:slug" exact component={SingleRender} />
       </Switch>
