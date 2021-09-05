@@ -10,6 +10,7 @@ import * as prismicT from "@prismicio/types";
 import ShowCarousel from "../Utils/Carousel";
 import { Wrapper } from "./SingleRendering.styles";
 import sofia_test from "../../sofia_test.jpg";
+import pinboard from "../../pin_boad.png";
 import QueryPrismic from "../Utils/QueryPrismic";
 
 // PRISMIC CONFIG
@@ -23,16 +24,36 @@ const Client = Prismic.client(apiEndpoint, { accessToken });
 // TYPESCRIPT USESTATE
 export interface IPrismicRes {
   category: string;
-  post_title: [];
-  post_subtitle: [];
-  activities_rating: [];
+  title_review: {
+    spans: [];
+    text: string;
+    type: string;
+  }[];
+  post_title: {
+    spans: [];
+    text: string;
+    type: string;
+  }[];
+  post_subtitle: {
+    spans: [];
+    text: string;
+    type: string;
+  }[];
+  activities_rating: {
+    rating: string;
+    rateble: {
+      spans: [];
+      text: string;
+      type: string;
+    }[];
+  }[];
   body_post: {
     image_paragraph: {
       alt: string;
       copyright: string;
       dimensions: {
-        width: number;
-        height: number;
+        width: string;
+        height: string;
       };
       url: string;
     };
@@ -51,12 +72,6 @@ export interface IPrismicRes {
   }[];
 }
 
-export interface IBodyPar {
-  image_paragraph: {};
-  title_paragraph: [];
-  paragraph: [];
-}
-
 // ********
 
 const SingleRendering = () => {
@@ -69,7 +84,7 @@ const SingleRendering = () => {
       );
       if (response) {
         setDocData(response.results[0].data);
-        console.log(response.results[0].data.body_post[0]);
+        console.log(response.results[0].data);
       }
     };
     fetchData();
@@ -78,105 +93,33 @@ const SingleRendering = () => {
   return (
     <Wrapper>
       <div className="first-block div-block">
-        <h1 className="h1-title-block">Roadmap</h1>
-        <p className="p-par-block">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
-          harum, expedita magnam amet reprehenderit cum id modi sunt tempore
-          nisi distinctio adipisci laboriosam iste exercitationem fugiat alias
-          doloremque cupiditate quidem?
-        </p>
+        <h1 className="h1-title-block">{doc?.post_title[0].text}</h1>
+        <p className="p-par-block">{doc?.post_subtitle[0].text}</p>
       </div>
 
       <div className="carousel-block">
-        <ShowCarousel />
+        <ShowCarousel
+          carouselText={doc?.title_review[0].text}
+          activities={doc?.activities_rating}
+        />
       </div>
 
-      
-        {doc?.body_post.map((item, index) => (
-          <div className="looped-block div-block">
-            <h1 className="h1-title-block">{item.title_paragraph[0].text}</h1>
-            <div className="img-looped-box">
-              <img
-                className="img-looped-block"
-                src={item.image_paragraph.url}
-                alt=""
-              />
-            </div>
-            {
-              item.paragraph.map((itemPar, index) => (
-                <p className="p-par-block">{itemPar.text}</p>
-              ))
-            }
-            
+      {doc?.body_post.map((item, index) => (
+        <div className="looped-block div-block">
+          <h1 className="h1-title-block">{item.title_paragraph[0].text}</h1>
+          <div className="img-looped-box">
+            <img
+              className="img-looped-block"
+              src={item.image_paragraph.url}
+              alt=""
+            />
+            <img src={pinboard} className="pin-board" alt="pin" />
           </div>
-        ))}
-      
-
-      <div className="looped-block div-block">
-        <h1 className="h1-title-block">Paragraph</h1>
-        <div className="img-looped-box">
-          <img className="img-looped-block" src={sofia_test} alt="" />
+          {item.paragraph.map((itemPar, index) => (
+            <p className="p-par-block">{itemPar.text}</p>
+          ))}
         </div>
-        <p className="p-par-block">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
-          harum, expedita magnam amet reprehenderit cum id modi sunt tempore
-          nisi distinctio adipisci laboriosam iste exercitationem fugiat alias
-          doloremque cupiditate quidem?
-        </p>
-      </div>
-
-      <div className="looped-block div-block">
-        <h1 className="h1-title-block">Paragraph</h1>
-        <div className="img-looped-box">
-          <img className="img-looped-block" src={sofia_test} alt="" />
-        </div>
-        <p className="p-par-block">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
-          harum, expedita magnam amet reprehenderit cum id modi sunt tempore
-          nisi distinctio adipisci laboriosam iste exercitationem fugiat alias
-          doloremque cupiditate quidem?
-        </p>
-      </div>
-
-      <div className="looped-block div-block">
-        <h1 className="h1-title-block">Paragraph</h1>
-        <p className="p-par-block">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
-          harum, expedita magnam amet reprehenderit cum id modi sunt tempore
-          nisi distinctio adipisci laboriosam iste exercitationem fugiat alias
-          doloremque cupiditate quidem?
-        </p>
-      </div>
-
-      <div className="looped-block div-block">
-        <h1 className="h1-title-block">Paragraph</h1>
-        <p className="p-par-block">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
-          harum, expedita magnam amet reprehenderit cum id modi sunt tempore
-          nisi distinctio adipisci laboriosam iste exercitationem fugiat alias
-          doloremque cupiditate quidem?
-        </p>
-      </div>
-
-      <div className="looped-block div-block">
-        <h1 className="h1-title-block">Paragraph</h1>
-        <p className="p-par-block">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
-          harum, expedita magnam amet reprehenderit cum id modi sunt tempore
-          nisi distinctio adipisci laboriosam iste exercitationem fugiat alias
-          doloremque cupiditate quidem?
-        </p>
-      </div>
-
-      <div className="looped-block div-block">
-        <h1 className="h1-title-block">Paragraph</h1>
-        <p className="p-par-block">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
-          harum, expedita magnam amet reprehenderit cum id modi sunt tempore
-          nisi distinctio adipisci laboriosam iste exercitationem fugiat alias
-          doloremque cupiditate quidem?
-        </p>
-      </div>
+      ))}
     </Wrapper>
   );
 };

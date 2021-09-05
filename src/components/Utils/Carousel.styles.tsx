@@ -10,6 +10,17 @@ export const Wrapper = styled.div`
     letter-spacing: 1px;
   }
 
+  .h4-carousel-textbar {
+    text-align: center;
+    margin: unset;
+    background-color: white;
+    font-family: "Rampart One";
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding-bottom: 2%;
+    filter: grayscale(1);
+  }
+
   .img_arrow {
     width: 3rem;
   }

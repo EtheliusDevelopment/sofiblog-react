@@ -7,7 +7,19 @@ import { Wrapper } from "./Carousel.styles";
 import sofia_test from "../../sofia_test.jpg";
 import ShutterSpeedIcon from "@material-ui/icons/ShutterSpeed";
 
-function ShowCarousel() {
+interface IpropsBadge {
+  carouselText?: string;
+  activities?: {
+    rating: string;
+    rateble: {
+      spans: [];
+      text: string;
+      type: string;
+    }[];
+  }[];
+}
+
+function ShowCarousel({ carouselText, activities }: IpropsBadge) {
   var items = [
     {
       name: "Random Name #1",
@@ -30,6 +42,7 @@ function ShowCarousel() {
       description: "Hello World!",
     },
   ];
+  console.log("activities");
 
   return (
     <Wrapper>
@@ -53,54 +66,21 @@ function ShowCarousel() {
           </>
         ))}
       </Carousel>
-      <Item />
+      <div className="badge-box">
+        {activities?.map((item, index) => (
+          <div className="badge-item">
+            <Badge badgeContent={item.rating} color="primary">
+              <ShutterSpeedIcon />
+            </Badge>
+            <p className="p-badge">{item.rateble[0].text}</p>
+          </div>
+        ))}
+      </div>
+      <h4 className="h4-carousel-textbar">{carouselText}</h4>
     </Wrapper>
   );
 }
 
-function Item(props: any) {
-  return (
-    <>
-      {/* <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
 
-      <Button className="CheckButton">Check it out!</Button> */}
-      <div className="badge-box">
-        <div className="badge-item">
-          <Badge badgeContent={4} color="primary">
-            <ShutterSpeedIcon />
-          </Badge>
-          <p className="p-badge">Kids Activities</p>
-        </div>
-
-        <div className="badge-item">
-          <Badge badgeContent={4} color="primary">
-            <ShutterSpeedIcon />
-          </Badge>
-          <p className="p-badge">Public Parks</p>
-        </div>
-
-        <div className="badge-item">
-          <Badge badgeContent={4} color="primary">
-            <ShutterSpeedIcon />
-          </Badge>
-          <p className="p-badge">Kids Food</p>
-        </div>
-        <div className="badge-item">
-          <Badge badgeContent={4} color="primary">
-            <ShutterSpeedIcon />
-          </Badge>
-          <p className="p-badge">Public Transports</p>
-        </div>
-        <div className="badge-item">
-          <Badge badgeContent={4} color="primary">
-            <ShutterSpeedIcon />
-          </Badge>
-          <p className="p-badge">English Speakers</p>
-        </div>
-      </div>
-    </>
-  );
-}
 
 export default ShowCarousel;
